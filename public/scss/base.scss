@@ -1,0 +1,59 @@
+
+
+body{
+    background-color: #fff;
+}
+
+header {
+    position: fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: 9999;
+    nav{
+        background-color: #000;
+        border-bottom:5px solid #F3D94E;
+    }    
+    a,a:hover{
+        color:#F3D94E;
+        margin-left:10px;
+    }
+}
+
+main{
+    margin-top:80px;
+    .container{
+        background: #fff;
+        min-height: 500px;
+        .row{
+            background: rgb(223, 223, 223);
+            min-height: 16px;
+            div[class^='col-']{
+                min-height: 100px;
+                border: 1px dashed #000;
+            }
+            .cuadro{
+                width:100px;
+                height: 100px;
+            }
+        }
+
+    }
+}
+
+.red{
+    background: red;
+}
+.blue{
+    background: blue;
+}
+.green{
+    background: green;
+}
+.yellow{
+    background: yellow;
+}
+
+.oscuro {
+    filter: brightness(50%);
+}

@@ -1,0 +1,20 @@
+  <!-- CUERPO DEL EJERCICIO -->
+  <main>
+    <div class="container">
+      <div class="row">
+        {{#each objetosPerdidos}}
+          <div class="col-6 ">
+            <div class="row">
+              <div class="col-4">
+                  <img src="{{foto}}" style:"width:100%">
+              </div>
+              <div class="col-8">
+                <div class="titulo"> {{nombre}}</div>
+                <div class="descripcion"> {{descripcion}}</div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </main>

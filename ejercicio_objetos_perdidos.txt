@@ -1,0 +1,79 @@
+Cuando llegue un objeto perdido, el encargado debe tomar nota de los siguientes datos y publicarlo en la aplicación:
+
+PERSONA QUE LO HA ENCONTRADO:
+- NOMBRE
+- TELÉFONO
+
+DATOS DEL OBJETO:
+- TITULO
+- DESCRIPCIÓN
+- LOCALIZACIÓN
+- FECHA DE LOCALIZACIÓN
+- FOTO (buscar como hacer un upload de archivo en nodejs)
+- ETIQUETAS (esto será un array de palabras separadas por comas así: CAMISETA, ROPA, ADIDDAS
+
+Estos datos se guardarán en una base de datos o archivo. Los usuarios podrán acceder a una sección pública de la web donde podrán ver todos los objetos encontrados con todos los detalles excepto los de la persona que lo encontró (ni el nombre ni el teléfono).
+
+
+
+
+
+
+
+HISTORIAS DE USUARIO
+
+1. PANTALLA FORMULARIO DE OBJETO /objetos/nuevo
+	- En en PMV habrá validación en cliente
+	- ACTUALIZACION (validar también en el servidor)
+	- El botón enviar envía el formulario SINCRONAMENTE al servidor /objetos/guardar
+	
+	Si se guarda bien, se  muestra el listado /objetos/listado {objetosperdidos}
+	Si no se guarda bien, se muestra mensaje de error /objetos/nuevo con error
+
+	NOTA: Cuando se guarde un objeto, se genera un ID único para el objeto
+	
+2. PANTALLA DE LISTADO DE OBJETOS /objetos/listado
+	- NOTA: habrá que inyectar al motor de plantillas, el listado de objetos
+	- NOTA: habrá que hacer un foreach para dibujar todos los objetos
+	
+
+SPRINTS
+
+FRONT-END
+- CONSTRUIR EL FORMULARIO (coder1)
+- CONSTRUIR EL LISTADO (coder1)
+
+BACK-END
+- ENRUTADOR CREAR LAS RUTAS GET, POST, ETC.. ) (coder2)
+	* /objetos/nuevo
+	* /objetos/guardar
+	* /objetos/listado
+
+BASE DE DATOS
+- MONTAR BD (coder3)
+- CONSTRUIR LA CAPA DAO (coder3)
+- CLASE OBJETO (Representa las propiedades de un objeto perdido) (coder3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
