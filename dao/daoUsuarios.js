@@ -30,11 +30,9 @@ daoUsuarios.login = function login(datosRecibidos){
     return new Promise((resolved,reject)=>{
         daoUsuarios.getUserByEmail(datosRecibidos.email)
         .then(async u=>{
-            console.log(u)
             if (u==null) resolved(u)
             else{
                 let resultado = await u.validarPass(datosRecibidos.pass)
-                console.log("Devuelvo: ", u)
                 u.auth=resultado
                 resolved(u)
             }
@@ -42,6 +40,7 @@ daoUsuarios.login = function login(datosRecibidos){
         .catch(err=>reject(err))
     })
 }
+
 
 
 
