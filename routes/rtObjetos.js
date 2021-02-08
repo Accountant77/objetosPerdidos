@@ -19,8 +19,16 @@ rtObjeto.post('/guardar', (req,res)=>{
 })
 
 rtObjeto.get('/listado', async (req,res)=>{
-    let oPerdidos =  await daoObjetos.listar()
+    let oPerdidos = await daoObjetos.listar()
     res.render('objetos/listadoObjetos', {objetosPerdidos:oPerdidos})
+})
+
+rtObjeto.post('/listar-titulo', (req,res)=>{
+    daoObjetos.getElementsByName(req.body.titulo)
+        .then(listado=>{
+            res.json(listado)
+        })
+        .catch(err=>console.log('Hemos tenido un problema: ', err))
 })
 
 module.exports = rtObjeto

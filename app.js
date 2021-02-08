@@ -15,6 +15,7 @@ const connection = require('./connection')
 
 //configuracion del motor de plantillas handlebars
 const exphbs = require('express-handlebars')
+const { json } = require('express')
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
@@ -53,6 +54,7 @@ app.use(session({ //Gestion de sessiones
     resave: false,
     saveUninitialized: true
 }))
+app.use(express.json())
 
 //routes
 app.use('/', rtMain)
