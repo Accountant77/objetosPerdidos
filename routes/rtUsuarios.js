@@ -52,11 +52,15 @@ rtUsuarios.get('/recuperar-clave', (req,res)=>{
 rtUsuarios.post('/recuperar-clave', (req,res)=>{
     daoUsuarios.getUserByEmail(req.body.email)
         .then(u=>{
-            if (u.emailUsuario!=null){
-                mailer.send(u.emailUsuario)
-                res.render('usuarios/recuperarPassword', {mesajeOk:u})
+            if (u==null){
+                let mensaje = "Usuario no valido"
+                res.render('usuarios/recuperarPassword', {mensaje:mensaje})
             } 
-            else res.render('usuarios/recuperarPassword', {mensaje:"Usuario no valido"}, {mensaje2:"¿Deseas crear una cuenta?"})
+            else{
+                mailer.send(u)
+                let mensaje = "Te hemos asignado una clave de acceso."
+                res.render('usuarios/recuperarPassword', {mensajeOk:mensaje})
+            } 
         })
         .catch(err=>console.log(err))
 })

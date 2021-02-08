@@ -14,7 +14,7 @@ rtObjeto.get('/nueva', (req,res)=>{
 rtObjeto.post('/guardar', (req,res)=>{
     req.body.foto=`/uploads/${req.file.filename}`
     daoObjetos.save(req.body)
-    res.send('<a href="http://localhost:3000/objetos/listado">Ver listado</a>')
+    res.render('objetos/formularioObjetos', {mensaje: 'El objeto se ha guaradado correctamente.'})
 
 })
 

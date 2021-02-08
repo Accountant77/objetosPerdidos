@@ -1,13 +1,12 @@
 <head>
-	<title>Guardar objeto perdido</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="icon" type="image/png" href="/images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
   <link rel="stylesheet" type="text/css" href="/css/base.css">
@@ -17,7 +16,7 @@
   <br><br>
   
 
-	<div class="bg-contact3" style="background-image: url('images/bg-01.jpg');">
+	<div class="bg-contact3" style="background-image: url('/images/bg-01.jpg');">
 		<div class="container-contact3">
 			<div class="wrap-contact3">
 				<form class="contact3-form validate-form" method="POST" action="/objetos/guardar" enctype="multipart/form-data">
@@ -25,15 +24,15 @@
 						Objetos perdidos
 					</span>
 
-          <div class="wrap-input3 validate-input" data-validate="El nombre del objeto no es valido">
-            <input class="input3" type="text" name="nombrePersona" placeholder="¿Quién lo lo encontró?">
-            <span class="focus-input3"></span>
-          </div>
+					<div class="wrap-input3 validate-input" data-validate="El nombre del objeto no es valido">
+						<input class="input3" type="text" name="nombrePersona" placeholder="¿Quién lo lo encontró?">
+						<span class="focus-input3"></span>
+					</div>
 
-          <div class="wrap-input3 validate-input" data-validate="El nombre del objeto no es valido">
-            <input class="input3" type="text" name="telefonoPersona" placeholder="Telefono del individuo">
-            <span class="focus-input3"></span>
-          </div>
+					<div class="wrap-input3 validate-input" data-validate="El nombre del objeto no es valido">
+						<input class="input3" type="text" name="telefonoPersona" placeholder="Telefono del individuo">
+						<span class="focus-input3"></span>
+					</div>
 
 					<div class="wrap-input3 validate-input" data-validate="El nombre del objeto no es valido">
 						<input class="input3" type="text" name="nombre" placeholder="Cosa u objeto encontrado">
@@ -45,12 +44,12 @@
 						<span class="focus-input3"></span>
 					</div>
 
-          <div class="wrap-input3 validate-input" data-validate = "Este campo no puede estar vacio">
+					<div class="wrap-input3 validate-input" data-validate = "Este campo no puede estar vacio">
 						<input class="input3" type="text" name="ubicacion" placeholder="¿Dondé encontró el objeto?">
 						<span class="focus-input3"></span>
 					</div>
-      
-          <div class="wrap-contact3-form-radio">
+		
+					<div class="wrap-contact3-form-radio">
 						<div class="contact3-form-radio m-r-42">
 							<input class="input-radio3" id="radio3" type="radio" name="category" value="documentos">
 							<label class="label-radio3" for="radio3">
@@ -65,7 +64,8 @@
 							</label>
 						</div>
 					</div>
-          <div class="wrap-contact3-form-radio">
+
+					<div class="wrap-contact3-form-radio">
 						<div class="contact3-form-radio m-r-42">
 							<input class="input-radio3" id="radio5" type="radio" name="category" value="maletas-morrales">
 							<label class="label-radio3" for="radio5">
@@ -86,7 +86,6 @@
 						<span class="focus-input3"></span>
 					</div>
 
-
 					<div class="container-contact3-form-btn">
 						<input class="contact3-form-btn" type="submit" value="Guardar Objeto">
 					</div>
@@ -97,10 +96,10 @@
 
 	<div id="dropDownSelect1"></div>
 
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/vendor/bootstrap/js/popper.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/vendor/select2/select2.min.js"></script>
 	<script>
 		$(".selection-2").select2({
 			minimumResultsForSearch: 20,
